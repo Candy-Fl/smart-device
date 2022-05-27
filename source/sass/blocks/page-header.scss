@@ -1,0 +1,133 @@
+.page-header {
+  position: sticky;
+  top: 0;
+  height: 120px;
+  background: $blue-gradient;
+  color: $color-text;
+  z-index: 2;
+
+  @media (max-width: $vp-1023) {
+    height: 100px;
+  }
+
+  @media (max-width: $vp-767) {
+    height: 70px;
+  }
+}
+
+.page-header__grid {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 60px;
+  padding-top: 1px;
+
+  @media (max-width: $vp-1023) {
+    padding-right: 30px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-right: 20px;
+  }
+}
+
+.page-header__logo {
+  background-image: url('../img/svg/logo-desktop.svg');
+  width: 215px;
+  height: 55px;
+  margin-top: 29px;
+
+  @media (max-width: $vp-1023) {
+    margin-top: 19px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 35px;
+    height: 35px;
+    margin-top: 14px;
+    margin-left: 1px;
+    background-image: url('../img/svg/logo-mobile.svg');
+  }
+}
+
+.page-header__contacts {
+  @include ptmono_16_18();
+  display: flex;
+  justify-content: space-between;
+  width: 482px;
+  margin-top: 44px;
+  padding-right: 13px;
+
+  @media (max-width: $vp-1023) {
+    width: 81px;
+    padding-right: 0;
+    margin-top: 29px;
+    padding-left: 1px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-top: 19px;
+  }
+}
+
+.page-header__contatcs-text {
+  @media (max-width: $vp-1023) {
+    display: none;
+  }
+}
+
+.page-header__email {
+  display: flex;
+  padding-left: 8px;
+
+  @media (max-width: $vp-1023) {
+    padding-left: 0;
+    margin-right: 0;
+  }
+}
+
+.page-header__image {
+  width: 21px;
+  height: 20px;
+}
+
+.page-header__image--email {
+  margin-right: 15px;
+  background-image: url('../img/svg/email-icon.svg');
+
+  @media (max-width: $vp-1023) {
+    margin-right: 0;
+  }
+}
+
+.page-header__phone {
+  display: flex;
+}
+
+.page-header__image--phone {
+  margin-right: 15px;
+  background-image: url('../img/svg/phone-icon.svg');
+
+  @media (max-width: $vp-1023) {
+    margin-right: 0;
+  }
+}
+
+.page__header-call-btn {
+  @include roboto-bold_14_16;
+  width: 160px;
+  height: 40px;
+  margin-top: 34px;
+  padding-bottom: 4px;
+  color: $color-text;
+  outline: none;
+  background-color: inherit;
+  border: 1px solid $color-border-header;
+  border-radius: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  @media (max-width: $vp-1023) {
+    display: none;
+  }
+}

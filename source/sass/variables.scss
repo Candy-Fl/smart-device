@@ -5,7 +5,21 @@
 
 $color-default-black:               #000000;
 $color-default-white:               #ffffff;
-$color-transparent:                 rgba(255, 255, 255, 0);
+$color-text:                        #F2F5F6;
+$color-border-header:               #F2F5F7;
+$color-blue-brand:                  #00B2FF;
+$color-dark-blue:                   #041827;
+$color-border-light:                #EBEBEB;
+$mask-dark:                         rgba(4, 24, 39, 0.5);
+$color-white-dim:                   rgba(255, 255, 255, 0.7);
+$color-white-border:                rgba(248, 253, 255, 0.7);
+$color-black-layer:                 rgba(3, 16, 27, 0.7);
+$color-blue-form:                   rgba(4, 20, 39, 0.15);
+$color-blue-background:             #00B3FF;
+$color-white-cross:                 #F8FDFF;
+$color-blue-button:                 #041427;
+
+
 
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
@@ -15,7 +29,7 @@ $color-torch-red:                   #ff1553;
 
 // Gradient
 
-$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+$blue-gradient:                     linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
 
 // Typography
 // ---------------------------------
@@ -45,7 +59,8 @@ $trans-600:                         0.6s $tf-default;
 
 $vp-320:                            320px;
 $vp-375:                            375px;
-$vp-768:                            768px;
+$vp-767:                            767px;
+$vp-1023:                           1023px;
 $vp-1024:                           1024px;
 $vp-1280:                           1280px;
 $vp-1440:                           1440px;

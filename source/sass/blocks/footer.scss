@@ -1,0 +1,118 @@
+.footer {
+  height: 280px;
+  background-color: $color-dark-blue;
+
+  @media (max-width: $vp-1023) {
+    height: 465px;
+  }
+
+  @media (max-width: $vp-767) {
+    height: max-content;
+  }
+
+  &--js {
+    @media (max-width: $vp-767) {
+      height: 475px;
+    }
+  }
+}
+
+.footer__contacts-adress {
+  @media (max-width: $vp-767) {
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    transition: max-height, opacity 0.4s ease-out;
+  }
+}
+
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: max-content minmax(0 ,max-content) minmax(0 ,max-content);
+
+  @media (max-width: $vp-1023) {
+    .footer__info {
+      grid-area: social;
+    }
+
+    .footer__sections {
+      grid-area: site;
+      padding-right: 76px;
+    }
+
+    .footer__contacts {
+      grid-area: phones;
+      padding-left: 25px;
+    }
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'social social'
+      'site phones';
+  }
+
+  @media (max-width: $vp-767) {
+    display: block;
+    padding: 0;
+
+    .footer__contacts {
+      padding-left: 0;
+    }
+
+    .footer__sections {
+      padding-right: 0;
+    }
+
+    .footer__sections-list {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out;
+    }
+
+    .footer__sections-list--opened {
+      max-height: 142px;
+    }
+
+    .footer__contacts-list {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out;
+    }
+
+    .footer__contacts-list--opened {
+      max-height: 130px;
+    }
+
+
+    .footer__contacts-adress--opened {
+      max-height: max-content;
+      opacity: 1;
+      margin-top: 17px;
+      margin-bottom: 17px;
+    }
+  }
+}
+
+.footer__sections-list,
+.footer__contacts-list,
+.footer__info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__info-logo {
+  background-image: url('../img/svg/logo-desktop.svg');
+  width: 215px;
+  height: 55px;
+  margin-bottom: 35px;
+
+  @media (max-width: $vp-1023) {
+    margin-bottom: 37px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 20px;
+  }
+}

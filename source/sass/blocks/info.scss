@@ -1,0 +1,154 @@
+.info {
+  margin-top: 120px;
+  margin-bottom: 100px;
+  @media (max-width: $vp-1023) {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-top: 50px;
+  }
+}
+
+.info__company {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: start;
+  margin-top: 120px;
+
+  @media (max-width: $vp-1023) {
+    margin-top: 80px;
+    margin-left: -4px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-top: 50px;
+    margin-left: 0px;
+    display: block;
+  }
+}
+
+.info__company-container {
+  margin-top: -6px;
+}
+
+.info__company-year {
+  width: 150px;
+  height: 320px;
+  margin-right: 100px;
+
+  @media (max-width: $vp-1023) {
+    margin-right: 29px;
+  }
+
+  @media (max-width: $vp-767) {
+    display: none;
+  }
+}
+
+.info__company-header {
+  @include roboto_36_51();
+  margin: 0;
+  color: $color-dark-blue;
+  margin-top: 6px;
+
+  @media (max-width: $vp-1023) {
+    margin-top: 0;
+  }
+
+  @media (max-width: $vp-767) {
+    @include roboto_28_39();
+  }
+}
+
+.info__company-description {
+  @include ptmono_16_22();
+  color: $color-dark-blue;
+
+  @media (max-width: $vp-767) {
+    @include ptmono_14_19();
+  }
+}
+
+.info__company-description--accordion {
+  margin-bottom: 20px;
+
+  @media (max-width: $vp-1023) {
+    margin-bottom: 0;
+  }
+}
+
+.info__company-description--hidden {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+
+.info__company-description--opened {
+  max-height: 142px;
+
+  @media (max-width: $vp-1023) {
+    max-height: 200px;
+  }
+
+  @media (max-width: $vp-767) {
+    max-height: 285px;
+  }
+}
+
+.info__company-text {
+  margin: 0;
+}
+
+.info__company-text--mobile {
+  @media (max-width: $vp-767) {
+    display: none;
+  }
+}
+
+.info__company-text--mobile--opened {
+  @media (max-width: $vp-767) {
+    display: block;
+  }
+}
+
+.info__company-text--first {
+  margin-top: 12px;
+}
+
+.info__company-text--second {
+  margin-top: 21px;
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 15px;
+  }
+}
+
+.info__company-more-btn {
+  @include roboto-bold_14_16();
+  color: $color-blue-brand;
+  outline: none;
+  background-color: inherit;
+  width: 180px;
+  height: 45px;
+  text-transform: uppercase;
+  border: 1px solid $color-blue-brand;
+  border-radius: 3px;
+  margin-top: 19px;
+  cursor: pointer;
+
+  @media (max-width: $vp-1023) {
+    margin-top: 14px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 160px;
+    height: 35px;
+    margin-top: -1px;
+  }
+}
+
+.info__company-more-btn--hidden {
+  display: none;
+}

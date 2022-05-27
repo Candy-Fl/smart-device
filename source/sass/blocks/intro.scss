@@ -1,0 +1,106 @@
+.intro {
+  margin-top: -120px;
+  padding-top: 184px;
+  height: 880px;
+  background-image: url('../img/content/page-main-desktop.jpg');
+
+  @media (max-width: $vp-1023) {
+    margin-top: -100px;
+    height: 640px;
+    background-size: cover;
+    background-position-x: -123px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-top: -70px;
+    height: 560px;
+    background-position-x: -230px;
+  }
+}
+
+.intro__wrapper {
+  padding-left: 125px;
+  margin-top: 120px;
+
+  @media (max-width: $vp-1023) {
+    margin-top: -5px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-top: -35px;
+  }
+}
+
+.intro__header {
+  @include roboto-bold_80_94();
+  margin: 0;
+  color: $color-text;
+  text-transform: uppercase;
+
+  @media (max-width: $vp-1023) {
+    @include roboto-bold_64_75();
+  }
+
+  @media (max-width: $vp-767) {
+    @include roboto-bold_36_42();
+  }
+}
+
+.intro__description {
+  @include ptmono_22_34();
+  display: block;
+  max-width: 685px;
+  margin: 0;
+  margin-top: 32px;
+  color: $color-text;
+
+  @media (max-width: $vp-1023) {
+    margin-top: 2px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-top: 8px;
+    margin-left: -1px;
+    @include  ptmono_14_22();
+  }
+}
+
+.intro__consultation-btn {
+  @include roboto-bold_18_21;
+  height: 55px;
+  width: 410px;
+  margin-top: 47px;
+  padding: 13px 25px;
+  padding-bottom: 17px;
+  color: $color-text;
+  background-color: $color-blue-brand;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+
+  &--text-xs {
+    display: none;
+  }
+
+    @media (max-width: $vp-1023) {
+      margin-left: 45px;
+      margin-top: 56px;
+    }
+
+    @media (max-width: $vp-767) {
+      @include roboto-bold_14_16();
+      width: 270px;
+      height: 40px;
+      margin-left: 0;
+      margin-top: 45px;
+      padding: 10px 30px 10px;
+
+      &--text-xs {
+        display: block;
+      }
+
+      &--text-lg {
+        display: none;
+      }
+    }
+}

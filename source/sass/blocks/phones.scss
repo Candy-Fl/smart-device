@@ -1,0 +1,102 @@
+.phones {
+  padding-top: 57px;
+  width: 345px;
+  margin-left: 30px;
+
+  @media (max-width: $vp-1023) {
+    padding-top: 0;
+    margin-left: 0;
+  }
+
+  @media (max-width: $vp-767) {
+    position: relative;
+    width: auto;
+    padding: 9px 0;
+    padding-top: 22px;
+    border-bottom: 1px solid $color-white-border;
+  }
+}
+
+.phones__header {
+  @include roboto_15_16();
+  color: $color-default-white;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 22px;
+
+  @media (max-width: $vp-767) {
+    padding: 0 25px;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+}
+
+.phones__show-more {
+  display: none;
+  position: absolute;
+  right: 26px;
+  top: 20px;
+  width: 15px;
+  height: 15px;
+  background-color: inherit;
+  border: none;
+
+  @media (max-width: $vp-767) {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+    content: '';
+      position: absolute;
+      top: -1px;
+      right: 7px;
+      display: block;
+      width: 1px;
+      height: 15px;
+      background: $color-white-cross;
+      transition: transform 0.3s ease-out;
+    }
+
+    &::before {
+      transform: rotate(270deg);
+    }
+  }
+}
+
+
+.phones__show-more--opened {
+  @media (max-width: $vp-767) {
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.phones__adress {
+  @include ptmono_16_22();
+  color: $color-white-dim;
+  margin-bottom: 6px;
+
+  @media (max-width: $vp-767) {
+    margin: 0 25px;
+    @include ptmono_14_19();
+  }
+}
+
+.phones__list {
+  @media (max-width: $vp-767) {
+    margin: 0 25px;
+  }
+}
+
+.phones__item {
+  @include ptmono_16_25();
+  color: $color-white-dim;
+  margin-bottom: 5px;
+
+  @media (max-width: $vp-767) {
+    @include ptmono_14_25();
+  }
+}

@@ -1,0 +1,41 @@
+.questions {
+  background-image: url('../img/content/form-background.jpg');
+  background-position-x: -542px;
+  height: 840px;
+  background-position-y: -575px;
+  background-color: $color-blue-background;
+
+  @media (max-width: $vp-1023) {
+    height: 580px;
+    padding-top: 45px;
+    background-image: none;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-top: 46px;
+    height: 750px;
+  }
+}
+
+.questions__wrapper {
+  display: grid;
+  grid-template-columns:minmax(400px, 510px) minmax(400px, 585px);
+  grid-column-gap: 115px;
+  padding-top: 165px;
+
+  @media (max-width: $vp-1023) {
+    display: block;
+  }
+}
+
+.questions__image {
+  background-image: url('../img/svg/airplane.svg');
+  width: 510px;
+  height: 285px;
+  display: block;
+  margin-top: 81px;
+
+  @media (max-width: $vp-1023) {
+    display: none;
+  }
+}

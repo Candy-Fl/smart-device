@@ -1,0 +1,315 @@
+form {
+  color: $color-default-white;
+  background-color: $color-blue-background;
+
+  &[name="questions"] {
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  &[name="popup"] {
+    position: absolute;
+    top: 146px;
+    left: -17px;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 500px;
+    height: 610px;
+    padding-top: 36px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    input {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    div {
+      margin-right: 16px;
+    }
+
+    button[name="popup__send-button"] {
+      width: 100%;
+      margin-top: 5px;
+      margin-bottom: 19px;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    &[name="popup__header"] {
+      @include roboto_30_42();
+    }
+
+    &[name="questions__header"] {
+      @include roboto_36_51();
+    }
+  }
+
+  p {
+    @include ptmono_16_22();
+
+    &[name="popup__description"] {
+      margin-top: 5px;
+      margin-bottom: 38px;
+      padding-right: 27px;
+    }
+  }
+
+  span[name="questions__bottom-container"] {
+    display: grid;
+    padding-left: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'questions_name questions_phone'
+      'questions_text questions_text'
+      'questions_button questions_checkbox-wrapper';
+    column-gap: 30px;
+    row-gap: 20px;
+  }
+
+  input {
+    @include ptmono_16_22();
+    border: none;
+    background: $color-blue-form;
+    border-radius: 3px;
+    color: $color-default-white;
+    height: 50px;
+    padding-left: 15px;
+
+    &[name="questions__name"] {
+      padding-bottom: 4px;
+      grid-area: questions_name;
+    }
+
+    &[name="questions__phone"] {
+      padding-bottom: 4px;
+      grid-area: questions_phone;
+    }
+
+    &[name="questions__text"] {
+      grid-area: questions_text;
+      padding-top: 34px;
+      padding-bottom: 121px;
+    }
+
+    &[name="popup__text"] {
+      height: 155px;
+      padding-bottom: 88px;
+    }
+
+    &[type="checkbox"] {
+      z-index: -1;
+      width: 0;
+    }
+  }
+
+  button:not([name="popup__close"]) {
+    @include roboto-bold_16_19();
+    text-transform: uppercase;
+    height: 45px;
+    grid-area: questions_button;
+    background-color: $color-blue-button;
+    border: none;
+    border-radius: 3px;
+    color: $color-default-white;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.9;
+    }
+
+    padding-top: 5px;
+    margin-top: 15px;
+    margin-right: 10px;
+  }
+
+  button[name="popup__close"] {
+    position: absolute;
+    right: 27px;
+    top: 22px;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+
+    &::before,
+    &::after {
+      content: '';
+        position: absolute;
+        top: -1px;
+        right: 7px;
+        display: block;
+        width: 1px;
+        height: 28px;
+        background: $color-white-cross;
+        transform: rotate(136deg);
+        cursor: pointer;
+      }
+
+    &::after {
+      transform: rotate(-136deg);
+    }
+  }
+
+  div {
+    @include ptmono_14_16();
+    grid-area: questions_checkbox-wrapper;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-left: 16px;
+
+    &[name="questions__checkbox-wrapper"] {
+      margin-top: 29px;
+      margin-left: 20px;
+
+      label {
+        opacity: 0.8;
+      }
+    }
+
+    input:checked + label {
+      &::before {
+        background-image: url('../img/svg/checkbox-icon.svg');
+        background-repeat: no-repeat;
+        background-position-y: 3px;
+        background-size: 10px;
+        background-position-x: 1px;
+      }
+    }
+  }
+
+  label {
+    position: relative;
+
+    &::before {
+      content: '';
+      z-index: 2;
+      display: block;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      background-color: inherit;
+      border: 1px solid $color-default-white;
+      border-radius: 2px;
+      left: -26px;
+      top: 8px;
+    }
+
+    &[name="popup__checkbox--text"] {
+
+      &::before {
+        left: -25px;
+        top: 1px;
+      }
+    }
+
+    &[name="questions__checkbox-label"] {
+      margin-left: -4px;
+    }
+  }
+
+  @media (max-width: $vp-1023) {
+    p {
+      &[name="questions__description"] {
+        margin-top: 7px;
+        padding-left: 0;
+        margin-bottom: 25px;
+      }
+    }
+
+    span {
+      &[name="questions__bottom-container"] {
+        padding-left: 0;
+      }
+    }
+
+    input[name="questions__text"] {
+      padding-top: 41px;
+      padding-bottom: 114px;
+    }
+
+    button:not([name="popup__close"]) {
+      padding-top: 7px;
+      margin-right: 55px;
+    }
+
+    div {
+      &[name="questions__checkbox-wrapper"] {
+        margin-top: 24px;
+        margin-left: 9px;
+      }
+    }
+
+    label {
+      &::before {
+        left: -25px;
+      }
+    }
+  }
+
+  @media (max-width: $vp-767) {
+    span[name="questions__bottom-container"] {
+      display: block;
+    }
+
+    h3 {
+      &[name="questions__header"] {
+        @include roboto_30_42();
+      }
+    }
+
+    p {
+      @include ptmono_14_19();
+
+      &[name="questions__description"] {
+        margin-top: 8px;
+        margin-bottom: 34px;
+      }
+    }
+
+    input {
+      width: 100%;
+
+      &[name="questions__name"] {
+        margin-bottom: 20px;
+      }
+
+      &[name="questions__phone"] {
+        margin-bottom: 20px;
+      }
+
+      &[name="questions__text"] {
+        padding-top: 34px;
+        padding-bottom: 146px;
+      }
+    }
+
+    button {
+      &[name="questions__button"] {
+        margin-top: 30px;
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+
+    div {
+      &[name="questions__checkbox-wrapper"] {
+        margin-left: 15px;
+
+        label {
+          &::before {
+            left: -26px;
+            height: 14px;
+          }
+        }
+      }
+    }
+  }
+
+}

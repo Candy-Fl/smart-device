@@ -30,13 +30,9 @@ html {
 body {
   width: 100%;
   height: 100%;
+  position: relative;
 
   background-color: $color-default-white;
-}
-
-a {
-  color: $color-default-black;
-  text-decoration: none;
 }
 
 img,
@@ -126,4 +122,8 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+}
+
+footer {
+  max-height: max-content;
 }
