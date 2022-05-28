@@ -19,6 +19,7 @@ form {
     padding-top: 36px;
     padding-left: 40px;
     padding-right: 40px;
+    z-index: 4;
 
     input {
       width: 100%;
@@ -254,6 +255,10 @@ form {
   }
 
   @media (max-width: $vp-767) {
+    &[name="popup"] {
+      width: 300px;
+    }
+
     span[name="questions__bottom-container"] {
       display: block;
     }
@@ -271,6 +276,10 @@ form {
         margin-top: 8px;
         margin-bottom: 34px;
       }
+
+      &[name="popup__description"] {
+        margin-bottom: 15px;
+      }
     }
 
     input {
@@ -287,6 +296,11 @@ form {
       &[name="questions__text"] {
         padding-top: 34px;
         padding-bottom: 146px;
+      }
+
+      &[name="popup__text"] {
+        height: 100px;
+        padding-bottom: 60px;
       }
     }
 

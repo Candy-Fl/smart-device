@@ -1,4 +1,12 @@
 .popup {
-  z-index: 3;
   background-color: $color-black-layer;
+}
+
+.popup__layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: $color-black-layer;
+  z-index: 3;
 }
