@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {toggle} from './utils/toggle-info';
 import {popup} from './utils/popup';
+import {sendData} from './utils/sendData';
 
 // ---------------------------------
 
@@ -13,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   toggle();
   popup();
+  sendData();
 
   // Modules
   // ---------------------------------

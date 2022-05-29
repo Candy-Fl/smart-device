@@ -690,6 +690,7 @@ footer {
   padding-top: 184px;
   height: 880px;
   background-image: url("../img/content/page-main-desktop.jpg");
+  background-color: #00B2FF;
 }
 
 .intro__wrapper {
@@ -737,6 +738,8 @@ footer {
   text-transform: uppercase;
   display: block;
   text-decoration: none;
+  padding-top: 15px;
+  padding-left: 27px;
 }
 
 .intro__consultation-btn--text-xs {
@@ -960,6 +963,7 @@ footer {
   height: 650px;
   background-image: url("../img/content/background-services.jpg");
   background-repeat: no-repeat;
+  background-color: #041827;
 }
 
 .goods__item:not(:last-child) {
@@ -1085,6 +1089,20 @@ form[name="popup"] {
 form[name="popup"] input {
   width: 100%;
   margin-bottom: 20px;
+}
+
+form[name="popup"] input[name="popup__checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
 }
 
 form[name="popup"] div {
@@ -1474,6 +1492,42 @@ form label[name="questions__checkbox-label"] {
   z-index: 3;
 }
 
+.alert__container {
+  overflow: hidden;
+}
+
+.alert {
+  background-color: #4BB543;
+  width: 200px;
+  height: 50px;
+  position: fixed;
+  right: 50vh;
+  left: 50vh;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-shadow: 2px 4px 35px rgba(3, 16, 27, 0.7);
+  box-shadow: 2px 4px 35px rgba(3, 16, 27, 0.7);
+  top: 0;
+  z-index: 3;
+  display: none;
+}
+
+.alert__error {
+  background-color: #ff1553;
+  width: 200px;
+  height: 50px;
+  position: fixed;
+  right: 50vh;
+  left: 50vh;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-shadow: 2px 4px 35px rgba(3, 16, 27, 0.7);
+  box-shadow: 2px 4px 35px rgba(3, 16, 27, 0.7);
+  top: 0;
+  z-index: 3;
+  display: none;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -1503,6 +1557,12 @@ form label[name="questions__checkbox-label"] {
 
   .benefit__icon--security {
     margin-left: -5px;
+  }
+
+  form p[name="questions__description"] {
+    margin-bottom: 35px;
+    margin-left: 5px;
+    margin-top: 12px;
   }
 }
 
@@ -1663,7 +1723,7 @@ form label[name="questions__checkbox-label"] {
 
   .benefit__item--price {
     margin-left: -1px;
-    padding-right: 24px;
+    padding-right: 35px;
   }
 
   .benefit__item--price .benefit__header {
@@ -1907,7 +1967,7 @@ form label[name="questions__checkbox-label"] {
     height: 40px;
     margin-left: 0;
     margin-top: 45px;
-    padding: 10px 30px 10px;
+    padding: 12px 38px 10px;
   }
 
   .intro__consultation-btn--text-xs {

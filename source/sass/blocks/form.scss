@@ -24,6 +24,23 @@ form {
     input {
       width: 100%;
       margin-bottom: 20px;
+
+      &[name="popup__checkbox"] {
+        position: absolute;
+
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+
+        white-space: nowrap;
+
+        border: 0;
+
+        clip: rect(0 0 0 0);
+        clip-path: inset(100%);
+      }
     }
 
     div {
@@ -212,6 +229,14 @@ form {
 
     &[name="questions__checkbox-label"] {
       margin-left: -4px;
+    }
+  }
+
+  @media (min-width: $vp-1024) {
+    p[name="questions__description"] {
+      margin-bottom: 35px;
+      margin-left: 5px;
+      margin-top: 12px;
     }
   }
 

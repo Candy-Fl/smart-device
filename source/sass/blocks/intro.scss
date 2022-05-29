@@ -3,6 +3,7 @@
   padding-top: 184px;
   height: 880px;
   background-image: url('../img/content/page-main-desktop.jpg');
+  background-color: $color-blue-brand;
 
   @media (max-width: $vp-1023) {
     margin-top: -100px;
@@ -79,30 +80,32 @@
   text-transform: uppercase;
   display: block;
   text-decoration: none;
+  padding-top: 15px;
+  padding-left: 27px;
 
   &--text-xs {
     display: none;
   }
 
-    @media (max-width: $vp-1023) {
-      margin-left: 45px;
-      margin-top: 56px;
+  @media (max-width: $vp-1023) {
+    margin-left: 45px;
+    margin-top: 56px;
+  }
+
+  @media (max-width: $vp-767) {
+    @include roboto-bold_14_16();
+    width: 270px;
+    height: 40px;
+    margin-left: 0;
+    margin-top: 45px;
+    padding: 12px 38px 10px;
+
+    &--text-xs {
+      display: block;
     }
 
-    @media (max-width: $vp-767) {
-      @include roboto-bold_14_16();
-      width: 270px;
-      height: 40px;
-      margin-left: 0;
-      margin-top: 45px;
-      padding: 10px 30px 10px;
-
-      &--text-xs {
-        display: block;
-      }
-
-      &--text-lg {
-        display: none;
-      }
+    &--text-lg {
+      display: none;
     }
+  }
 }

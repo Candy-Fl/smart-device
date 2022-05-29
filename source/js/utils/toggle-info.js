@@ -22,6 +22,11 @@ function toggle() {
   companyButton.addEventListener('click', () => {
     mobileText.classList.toggle('info__company-text--mobile--opened');
     accordion.classList.toggle('info__company-description--opened');
+    if (companyButton.textContent === 'Подробнее') {
+      companyButton.textContent = 'Свернуть';
+    } else {
+      companyButton.textContent = 'Подробнее';
+    }
   });
 
   footerButtonSections.addEventListener('click', () => {

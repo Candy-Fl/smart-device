@@ -49,7 +49,7 @@
       <header class="page-header">
         <div class="page-header__wrapper container">
           <div class="page-header__grid">
-            <a class="page-header__logo" alt="Логотип"></a>
+            <a class="page-header__logo"></a>
             <div class="page-header__contacts">
               <div class="page-header__email">
                 <div class="page-header__image page-header__image--email"></div>
@@ -98,14 +98,14 @@
                 <use xlink:href="#security"></use>
               </svg>
               <h2 class="benefit__header ">Полная конфиденциальность</h2>
-              <p class="benefit__description">По желанию клиента &nbspмы обеспечиваем полную конфеденциальность.</p>
+              <p class="benefit__description">По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
             </li>
             <li class="benefit__item benefit__item--price" tabindex="0">
               <svg class="benefit__icon benefit__icon--price">
                 <use xlink:href="#price"></use>
               </svg>
               <h2 class="benefit__header">Персонализация стоимости</h2>
-              <p class="benefit__description">Мы &nbspподбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+              <p class="benefit__description">Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
             </li>
           </ul>
         </div>
@@ -113,7 +113,7 @@
         <div class="info__company">
           <picture class="info__company-year">
             <source type="image/webp" srcset="img/content/2022-image.webp">
-            <img src="img/content/2022-image.jpg" alt="2022 год" width="150px" height="320px">
+            <img src="img/content/2022-image.jpg" alt="2022 год" width="150" height="320">
           </picture>
           <div class="info__company-container">
             <h2 class="info__company-header">О компании</h2>
@@ -170,12 +170,12 @@
           <h3 name="questions__header">Остались вопросы? Задайте их нам!</h3>
           <p name="questions__description">Мы проконсультируем Вас бесплатно</p>
           <span name="questions__bottom-container">
-            <input type="text" name="questions__name" placeholder="Имя">
-            <input type="tel" name="questions__phone" placeholder="Телефон">
-            <input type="text" name="questions__text" cols="30" rows="10" placeholder="Ваш вопрос">
-            <button name="questions__button" type="button">Задать вопрос</button>
+            <input type="text" name="questions__name" id="questions__name" placeholder="Имя">
+            <input type="tel" name="questions__phone" id="questions__phone" placeholder="Телефон">
+            <input type="text" name="questions__text" id="questions__text" cols="30" rows="10" placeholder="Ваш вопрос">
+            <button name="questions__button" id="questions__button" type="button">Задать вопрос</button>
             <div name="questions__checkbox-wrapper">
-              <input name="questions__checkbox" type="checkbox" id="checkbox-form">
+              <input name="questions__checkbox visually-hidden" type="checkbox" id="checkbox-form">
               <label name="questions__checkbox-label" for="checkbox-form">Я согласен на обработку персональных данных</label>
             </div>
           </span>
@@ -204,7 +204,7 @@
           <h2 class="site__header">разделы сайта</h2>
           <button class="site__show-more site__show-more--opened"></button>
           <ul class="footer__sections-list footer__sections-list--opened site__list">
-            <div class="site__top-wrapper">
+            <span class="site__top-wrapper">
               <li class="site__item">
                 <a class="site__item-link" href="#">О Компаниии</a>
               </li>
@@ -217,8 +217,8 @@
               <li class="site__item">
                 <a class="site__item-link" href="#">Монтаж печатных плат</a>
               </li>
-            </div>
-            <div class="site__bottom-wrapper">
+            </span>
+            <span class="site__bottom-wrapper">
               <li class="site__item">
                 <a class="site__item-link" href="#">Комплектующие</a>
               </li>
@@ -228,7 +228,7 @@
               <li class="site__item">
                 <a class="site__item-link" href="#">Контакты</a>
               </li>
-            </div>
+            </span>
           </ul>
         </div>
         <div class="footer__contacts phones">
@@ -250,16 +250,21 @@
         <button class="popup__close" type="button" name="popup__close"></button>
         <h3 name="popup__header">Закажите звонок</h3>
         <p name="popup__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-        <input type="text" name="popup__name" placeholder="Имя">
-        <input type="tel" name="popup__phone" placeholder="Телефон">
-        <input type="text" name="popup__text" cols="30" rows="10" placeholder="Ваш вопрос">
+        <input type="text" name="popup__name" id="popup__name" placeholder="Имя">
+        <input type="tel" name="popup__phone" id="popup__phone" placeholder="Телефон">
+        <input type="text" name="popup__text" id="popup__text" cols="30" rows="10" placeholder="Ваш вопрос">
         <button class="popup__send-button" name="popup__send-button" type="button">Отправить</button>
         <div>
-          <input type="checkbox" id="checkbox-popup">
-          <label name="popup__checkbox--text" for="checkbox-popup"> Я согласен на обработку &nbspперсональных данных</label>
+          <input name="popup__checkbox" type="checkbox" id="checkbox-popup">
+          <label name="popup__checkbox--text" for="checkbox-popup"> Я согласен на обработку персональных данных</label>
         </div>
       </form>
     </section>
+
+    <div class="alert__container">
+      <div class="alert">Заявка успешно отправлена!</div>
+      <div class="alert__error">Проверьте введенные данные</div>
+    </div>
 
     <script src="js/main.min.js"></script>
   </body>
