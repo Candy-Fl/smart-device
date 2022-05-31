@@ -71,9 +71,19 @@
 }
 
 .page-header__contatcs-text {
+  @include ptmono_16_18();
+  text-decoration: none;
+  color: $color-text;
+
   @media (max-width: $vp-1023) {
     display: none;
   }
+}
+
+.page-header__contatcs-phone {
+  @include ptmono_16_18();
+  text-decoration: none;
+  color: $color-text;
 }
 
 .page-header__email {

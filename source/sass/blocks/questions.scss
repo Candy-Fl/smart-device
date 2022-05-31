@@ -15,6 +15,18 @@
     padding-top: 46px;
     height: 750px;
   }
+
+  object {
+    background-image: url('../img/svg/airplane.svg');
+    width: 510px;
+    height: 285px;
+    display: block;
+    margin-top: 81px;
+
+    @media (max-width: $vp-1023) {
+      display: none;
+    }
+  }
 }
 
 .questions__wrapper {
@@ -25,17 +37,5 @@
 
   @media (max-width: $vp-1023) {
     display: block;
-  }
-}
-
-.questions__image {
-  background-image: url('../img/svg/airplane.svg');
-  width: 510px;
-  height: 285px;
-  display: block;
-  margin-top: 81px;
-
-  @media (max-width: $vp-1023) {
-    display: none;
   }
 }

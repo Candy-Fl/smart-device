@@ -92,11 +92,15 @@
 }
 
 .phones__item {
-  @include ptmono_16_25();
-  color: $color-white-dim;
   margin-bottom: 5px;
 
-  @media (max-width: $vp-767) {
-    @include ptmono_14_25();
+  &-link {
+    @include ptmono_16_25();
+    color: $color-white-dim;
+    text-decoration: none;
+
+    @media (max-width: $vp-767) {
+      @include ptmono_14_25();
+    }
   }
 }

@@ -1,8 +1,7 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
-import {toggle} from './utils/toggle-info';
-import {popup} from './utils/popup';
-import {sendData} from './utils/sendData';
+import {iosVhFix} from './vendor/ios-vh-fix';
+import {toggle} from './vendor/toggle-info';
+import {popup} from './vendor/popup';
+import {sendData} from './vendor/sendData';
 
 // ---------------------------------
 
@@ -15,15 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
   toggle();
   popup();
   sendData();
-
-  // Modules
-  // ---------------------------------
-
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener('load', () => {
-    initModals();
-  });
 });
 
 // ---------------------------------

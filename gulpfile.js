@@ -74,7 +74,8 @@ const copy = () => {
     'source/**.html',
     'source/fonts/**',
     'source/img/**',
-    'source/favicon/**',
+    'source/favicon/**.ico',
+    'source/**.ico'
   ], {
     base: 'source',
   })
@@ -103,6 +104,7 @@ const syncServer = () => {
   gulp.watch('source/img/**/*.{png,jpg,webp}', gulp.series(copyImages, refresh));
 
   gulp.watch('source/favicon/**', gulp.series(copy, refresh));
+  gulp.watch('source/**.ico', gulp.series(copy, refresh));
   gulp.watch('source/video/**', gulp.series(copy, refresh));
   gulp.watch('source/downloads/**', gulp.series(copy, refresh));
   gulp.watch('source/*.php', gulp.series(copy, refresh));

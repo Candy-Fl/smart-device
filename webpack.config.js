@@ -10,15 +10,12 @@ module.exports = {
   mode: 'development',
   entry: {
     main: './js/main.js',
-    vendor: './js/vendor.js',
+    vendor: './js/vendor/vendor.js',
   },
   devtool: isDev ? 'source-map' : false,
   output: {
     filename: '[name].min.js',
     path: path.resolve(__dirname, 'build/js'),
-  },
-  optimization: {
-    minimize: isDev ? false : true,
   },
   module: {
     rules: [

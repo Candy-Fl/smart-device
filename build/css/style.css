@@ -638,6 +638,22 @@ footer {
   padding-right: 13px;
 }
 
+.page-header__contatcs-text {
+  font-family: "PTMono", "arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+  color: #F2F5F6;
+}
+
+.page-header__contatcs-phone {
+  font-family: "PTMono", "arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+  color: #F2F5F6;
+}
+
 .page-header__email {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -742,7 +758,7 @@ footer {
   padding-left: 27px;
 }
 
-.intro__consultation-btn--text-xs {
+.intro__consultation--text--xs {
   display: none;
 }
 
@@ -1044,6 +1060,14 @@ footer {
   background-color: #00B3FF;
 }
 
+.questions object {
+  background-image: url("../img/svg/airplane.svg");
+  width: 510px;
+  height: 285px;
+  display: block;
+  margin-top: 81px;
+}
+
 .questions__wrapper {
   display: -ms-grid;
   display: grid;
@@ -1051,14 +1075,6 @@ footer {
   grid-template-columns: minmax(400px, 510px) minmax(400px, 585px);
   grid-column-gap: 115px;
   padding-top: 165px;
-}
-
-.questions__image {
-  background-image: url("../img/svg/airplane.svg");
-  width: 510px;
-  height: 285px;
-  display: block;
-  margin-top: 81px;
 }
 
 form {
@@ -1069,6 +1085,33 @@ form {
 form[name="questions"] {
   width: 100%;
   margin-right: 10px;
+}
+
+form[name="questions"] h3 {
+  margin: 0;
+  font-family: "RobotoCondensed", "arial", sans-serif;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+}
+
+form[name="questions"] div {
+  display: -ms-grid;
+  display: grid;
+  padding-left: 5px;
+  -ms-grid-columns: 1fr 30px 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto 20px auto 20px auto;
+  grid-template-areas: 'questions_name questions_phone' 'questions_text questions_text' 'questions_button questions_checkbox-wrapper';
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+  row-gap: 20px;
+}
+
+form[name="questions"] span label {
+  opacity: 0.8;
+  margin-left: -4px;
 }
 
 form[name="popup"] {
@@ -1084,6 +1127,12 @@ form[name="popup"] {
   padding-left: 40px;
   padding-right: 40px;
   z-index: 4;
+}
+
+form[name="popup"] p {
+  margin-top: 5px;
+  margin-bottom: 38px;
+  padding-right: 27px;
 }
 
 form[name="popup"] input {
@@ -1105,58 +1154,37 @@ form[name="popup"] input[name="popup__checkbox"] {
   clip-path: inset(100%);
 }
 
-form[name="popup"] div {
-  margin-right: 16px;
+form[name="popup"] label::before {
+  left: -25px;
+  top: 1px;
 }
 
-form[name="popup"] button[name="popup__send-button"] {
-  width: 100%;
-  margin-top: 5px;
-  margin-bottom: 19px;
-}
-
-form h3 {
+form[name="popup"] h3 {
   margin: 0;
-}
-
-form h3[name="popup__header"] {
   font-family: "RobotoCondensed", "arial", sans-serif;
   font-size: 30px;
   line-height: 42px;
   font-weight: 400;
 }
 
-form h3[name="questions__header"] {
-  font-family: "RobotoCondensed", "arial", sans-serif;
-  font-size: 36px;
-  line-height: 51px;
-  font-weight: 400;
+form[name="popup"] div {
+  margin-left: 34px;
+}
+
+form[name="popup"] button[name="popup__send-button"] {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 14px;
+}
+
+form input::-webkit-input-placeholder {
+  color: #ffffff;
 }
 
 form p {
   font-family: "PTMono", "arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
-}
-
-form p[name="popup__description"] {
-  margin-top: 5px;
-  margin-bottom: 38px;
-  padding-right: 27px;
-}
-
-form span[name="questions__bottom-container"] {
-  display: -ms-grid;
-  display: grid;
-  padding-left: 5px;
-  -ms-grid-columns: 1fr 30px 1fr;
-  grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: auto 20px auto 20px auto;
-  grid-template-areas: 'questions_name questions_phone' 'questions_text questions_text' 'questions_button questions_checkbox-wrapper';
-  -webkit-column-gap: 30px;
-  -moz-column-gap: 30px;
-  column-gap: 30px;
-  row-gap: 20px;
 }
 
 form input {
@@ -1264,7 +1292,7 @@ form button[name="popup__close"]::after {
   transform: rotate(-136deg);
 }
 
-form div {
+form span {
   -ms-grid-row: 5;
   -ms-grid-column: 3;
   font-family: "PTMono", "arial", sans-serif;
@@ -1281,16 +1309,7 @@ form div {
   padding-left: 16px;
 }
 
-form div[name="questions__checkbox-wrapper"] {
-  margin-top: 29px;
-  margin-left: 20px;
-}
-
-form div[name="questions__checkbox-wrapper"] label {
-  opacity: 0.8;
-}
-
-form div input:checked + label::before {
+form span input:checked + label::before {
   background-image: url("../img/svg/checkbox-icon.svg");
   background-repeat: no-repeat;
   background-position-y: 3px;
@@ -1300,6 +1319,10 @@ form div input:checked + label::before {
 
 form label {
   position: relative;
+  font-family: "PTMono", "arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  opacity: 0.8;
 }
 
 form label::before {
@@ -1314,15 +1337,6 @@ form label::before {
   border-radius: 2px;
   left: -26px;
   top: 8px;
-}
-
-form label[name="popup__checkbox--text"]::before {
-  left: -25px;
-  top: 1px;
-}
-
-form label[name="questions__checkbox-label"] {
-  margin-left: -4px;
 }
 
 .footer {
@@ -1427,11 +1441,15 @@ form label[name="questions__checkbox-label"] {
 }
 
 .phones__item {
+  margin-bottom: 5px;
+}
+
+.phones__item-link {
   font-family: "PTMono", "arial", sans-serif;
   font-size: 16px;
   line-height: 25px;
   color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 5px;
+  text-decoration: none;
 }
 
 .site {
@@ -1559,7 +1577,12 @@ form label[name="questions__checkbox-label"] {
     margin-left: -5px;
   }
 
-  form p[name="questions__description"] {
+  form[name="questions"] span {
+    margin-top: 29px;
+    margin-left: 20px;
+  }
+
+  form[name="questions"] p {
     margin-bottom: 35px;
     margin-left: 5px;
     margin-top: 12px;
@@ -1791,21 +1814,26 @@ form label[name="questions__checkbox-label"] {
     background-image: none;
   }
 
+  .questions object {
+    display: none;
+  }
+
   .questions__wrapper {
     display: block;
   }
 
-  .questions__image {
-    display: none;
-  }
-
-  form p[name="questions__description"] {
+  form[name="questions"] p {
     margin-top: 7px;
     padding-left: 0;
     margin-bottom: 25px;
   }
 
-  form span[name="questions__bottom-container"] {
+  form[name="questions"] span {
+    margin-top: 24px;
+    margin-left: 9px;
+  }
+
+  form[name="questions"] div {
     padding-left: 0;
   }
 
@@ -1817,11 +1845,6 @@ form label[name="questions__checkbox-label"] {
   form button:not([name="popup__close"]) {
     padding-top: 7px;
     margin-right: 55px;
-  }
-
-  form div[name="questions__checkbox-wrapper"] {
-    margin-top: 24px;
-    margin-left: 9px;
   }
 
   form label::before {
@@ -1967,14 +1990,14 @@ form label[name="questions__checkbox-label"] {
     height: 40px;
     margin-left: 0;
     margin-top: 45px;
-    padding: 12px 38px 10px;
+    padding: 12px 37px 10px;
   }
 
-  .intro__consultation-btn--text-xs {
+  .intro__consultation--text--xs {
     display: block;
   }
 
-  .intro__consultation-btn--text-lg {
+  .intro__consultation--text--lg {
     display: none;
   }
 
@@ -2179,34 +2202,44 @@ form label[name="questions__checkbox-label"] {
     height: 750px;
   }
 
-  form[name="popup"] {
-    width: 300px;
+  form[name="questions"] p {
+    margin-top: 8px;
+    margin-bottom: 34px;
   }
 
-  form span[name="questions__bottom-container"] {
-    display: block;
-  }
-
-  form h3[name="questions__header"] {
+  form[name="questions"] h3 {
     font-family: "RobotoCondensed", "arial", sans-serif;
     font-size: 30px;
     line-height: 42px;
     font-weight: 400;
   }
 
+  form[name="questions"] div {
+    padding-left: 0;
+    display: block;
+  }
+
+  form[name="questions"] span {
+    margin-left: 15px;
+  }
+
+  form[name="questions"] span label::before {
+    left: -26px;
+    height: 14px;
+  }
+
+  form[name="popup"] p {
+    margin-bottom: 15px;
+  }
+
+  form[name="popup"] {
+    width: 300px;
+  }
+
   form p {
     font-family: "PTMono", "arial", sans-serif;
     font-size: 14px;
     line-height: 19px;
-  }
-
-  form p[name="questions__description"] {
-    margin-top: 8px;
-    margin-bottom: 34px;
-  }
-
-  form p[name="popup__description"] {
-    margin-bottom: 15px;
   }
 
   form input {
@@ -2235,15 +2268,6 @@ form label[name="questions__checkbox-label"] {
     margin-top: 30px;
     width: 100%;
     margin-right: 0;
-  }
-
-  form div[name="questions__checkbox-wrapper"] {
-    margin-left: 15px;
-  }
-
-  form div[name="questions__checkbox-wrapper"] label::before {
-    left: -26px;
-    height: 14px;
   }
 
   .footer {
@@ -2387,7 +2411,7 @@ form label[name="questions__checkbox-label"] {
     margin: 0 25px;
   }
 
-  .phones__item {
+  .phones__item-link {
     font-family: "PTMono", "arial", sans-serif;
     font-size: 14px;
     line-height: 25px;

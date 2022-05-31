@@ -5,6 +5,89 @@ form {
   &[name="questions"] {
     width: 100%;
     margin-right: 10px;
+
+    h3 {
+      margin: 0;
+      @include roboto_36_51();
+    }
+
+    div {
+      display: grid;
+      padding-left: 5px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        'questions_name questions_phone'
+        'questions_text questions_text'
+        'questions_button questions_checkbox-wrapper';
+      column-gap: 30px;
+      row-gap: 20px;
+    }
+
+    span {
+      @media (min-width: $vp-1024) {
+        margin-top: 29px;
+        margin-left: 20px;
+      }
+
+      label {
+        opacity: 0.8;
+        margin-left: -4px;
+      }
+    }
+
+    @media (max-width: $vp-767) {
+      p {
+        margin-top: 8px;
+        margin-bottom: 34px;
+      }
+
+      h3 {
+        @include roboto_30_42();
+      }
+
+
+      div {
+        padding-left: 0;
+        display: block;
+      }
+
+      span {
+        margin-left: 15px;
+
+        label {
+          &::before {
+            left: -26px;
+            height: 14px;
+          }
+        }
+      }
+    }
+
+    @media (min-width: $vp-1024) {
+      p {
+        margin-bottom: 35px;
+        margin-left: 5px;
+        margin-top: 12px;
+      }
+    }
+
+    @media (max-width: $vp-1023) {
+
+      p {
+          margin-top: 7px;
+          padding-left: 0;
+          margin-bottom: 25px;
+        }
+
+      span {
+        margin-top: 24px;
+        margin-left: 9px;
+      }
+
+      div {
+        padding-left: 0;
+      }
+    }
   }
 
   &[name="popup"] {
@@ -20,6 +103,12 @@ form {
     padding-left: 40px;
     padding-right: 40px;
     z-index: 4;
+
+    p {
+      margin-top: 5px;
+      margin-bottom: 38px;
+      padding-right: 27px;
+    }
 
     input {
       width: 100%;
@@ -43,48 +132,42 @@ form {
       }
     }
 
+    label {
+      &::before {
+        left: -25px;
+        top: 1px;
+      }
+    }
+
+
+  h3 {
+    margin: 0;
+    @include roboto_30_42();
+  }
+
     div {
-      margin-right: 16px;
+      margin-left: 34px;
     }
 
     button[name="popup__send-button"] {
       width: 100%;
       margin-top: 5px;
-      margin-bottom: 19px;
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: $vp-767) {
+      p {
+        margin-bottom: 15px;
+      }
     }
   }
 
-  h3 {
-    margin: 0;
-    &[name="popup__header"] {
-      @include roboto_30_42();
-    }
-
-    &[name="questions__header"] {
-      @include roboto_36_51();
-    }
+  input::-webkit-input-placeholder {
+    color: $color-default-white;
   }
 
   p {
     @include ptmono_16_22();
-
-    &[name="popup__description"] {
-      margin-top: 5px;
-      margin-bottom: 38px;
-      padding-right: 27px;
-    }
-  }
-
-  span[name="questions__bottom-container"] {
-    display: grid;
-    padding-left: 5px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      'questions_name questions_phone'
-      'questions_text questions_text'
-      'questions_button questions_checkbox-wrapper';
-    column-gap: 30px;
-    row-gap: 20px;
   }
 
   input {
@@ -174,22 +257,13 @@ form {
     }
   }
 
-  div {
+  span{
     @include ptmono_14_16();
     grid-area: questions_checkbox-wrapper;
     display: flex;
     justify-content: space-between;
     position: relative;
     padding-left: 16px;
-
-    &[name="questions__checkbox-wrapper"] {
-      margin-top: 29px;
-      margin-left: 20px;
-
-      label {
-        opacity: 0.8;
-      }
-    }
 
     input:checked + label {
       &::before {
@@ -204,6 +278,8 @@ form {
 
   label {
     position: relative;
+    @include ptmono_14_16();
+    opacity: 0.8;
 
     &::before {
       content: '';
@@ -218,42 +294,9 @@ form {
       left: -26px;
       top: 8px;
     }
-
-    &[name="popup__checkbox--text"] {
-
-      &::before {
-        left: -25px;
-        top: 1px;
-      }
-    }
-
-    &[name="questions__checkbox-label"] {
-      margin-left: -4px;
-    }
-  }
-
-  @media (min-width: $vp-1024) {
-    p[name="questions__description"] {
-      margin-bottom: 35px;
-      margin-left: 5px;
-      margin-top: 12px;
-    }
   }
 
   @media (max-width: $vp-1023) {
-    p {
-      &[name="questions__description"] {
-        margin-top: 7px;
-        padding-left: 0;
-        margin-bottom: 25px;
-      }
-    }
-
-    span {
-      &[name="questions__bottom-container"] {
-        padding-left: 0;
-      }
-    }
 
     input[name="questions__text"] {
       padding-top: 41px;
@@ -263,13 +306,6 @@ form {
     button:not([name="popup__close"]) {
       padding-top: 7px;
       margin-right: 55px;
-    }
-
-    div {
-      &[name="questions__checkbox-wrapper"] {
-        margin-top: 24px;
-        margin-left: 9px;
-      }
     }
 
     label {
@@ -284,27 +320,8 @@ form {
       width: 300px;
     }
 
-    span[name="questions__bottom-container"] {
-      display: block;
-    }
-
-    h3 {
-      &[name="questions__header"] {
-        @include roboto_30_42();
-      }
-    }
-
     p {
       @include ptmono_14_19();
-
-      &[name="questions__description"] {
-        margin-top: 8px;
-        margin-bottom: 34px;
-      }
-
-      &[name="popup__description"] {
-        margin-bottom: 15px;
-      }
     }
 
     input {
@@ -334,19 +351,6 @@ form {
         margin-top: 30px;
         width: 100%;
         margin-right: 0;
-      }
-    }
-
-    div {
-      &[name="questions__checkbox-wrapper"] {
-        margin-left: 15px;
-
-        label {
-          &::before {
-            left: -26px;
-            height: 14px;
-          }
-        }
       }
     }
   }
