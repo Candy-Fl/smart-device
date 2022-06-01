@@ -84,6 +84,10 @@
   @include ptmono_16_18();
   text-decoration: none;
   color: $color-text;
+
+  @media (max-width: $vp-1023) {
+    display: none;
+  }
 }
 
 .page-header__email {

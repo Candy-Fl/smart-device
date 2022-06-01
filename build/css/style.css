@@ -1617,6 +1617,10 @@ form label::before {
     display: none;
   }
 
+  .page-header__contatcs-phone {
+    display: none;
+  }
+
   .page-header__email {
     padding-left: 0;
     margin-right: 0;
