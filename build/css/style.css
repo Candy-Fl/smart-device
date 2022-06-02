@@ -669,6 +669,8 @@ footer {
 .page-header__image--email {
   margin-right: 15px;
   background-image: url("../img/svg/email-icon.svg");
+  background-repeat: no-repeat;
+  width: 22px;
 }
 
 .page-header__phone {
@@ -758,7 +760,7 @@ footer {
   padding-left: 27px;
 }
 
-.intro__consultation--text--xs {
+.intro__consultation-text--xs {
   display: none;
 }
 
@@ -1060,7 +1062,7 @@ footer {
   background-color: #00B3FF;
 }
 
-.questions object {
+.questions img {
   background-image: url("../img/svg/airplane.svg");
   width: 510px;
   height: 285px;
@@ -1595,6 +1597,7 @@ form label::before {
   }
 
   .page-header {
+    position: inherit;
     height: 100px;
   }
 
@@ -1818,7 +1821,7 @@ form label::before {
     background-image: none;
   }
 
-  .questions object {
+  .questions img {
     display: none;
   }
 
@@ -1997,11 +2000,11 @@ form label::before {
     padding: 12px 37px 10px;
   }
 
-  .intro__consultation--text--xs {
+  .intro__consultation-text--xs {
     display: block;
   }
 
-  .intro__consultation--text--lg {
+  .intro__consultation-text--lg {
     display: none;
   }
 
